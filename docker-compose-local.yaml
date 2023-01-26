@@ -1,0 +1,10 @@
+services:
+  account-provider:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./build/libs/account-provider.jar:/app/account-provider.jar
+    ports:
+      - 9085:8081

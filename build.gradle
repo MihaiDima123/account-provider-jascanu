@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'war'
+	id 'org.springframework.boot' version '3.0.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.accountprovider'
+version = ''
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework:spring-jdbc:6.0.4'
+	implementation 'org.springframework.boot:spring-boot:3.0.2'
+	implementation 'org.springframework.boot:spring-boot-autoconfigure:3.0.2'
+	implementation 'org.springframework.boot:spring-boot-starter-logging:3.0.2'
+	implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+	implementation 'org.springframework:spring-core:6.0.4'
+	implementation 'org.yaml:snakeyaml:1.33'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.14.1'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.1'
+	implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.1'
+	implementation 'org.springframework:spring-web:6.0.4'
+	implementation 'org.springframework:spring-webmvc:6.0.4'
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat:3.0.2'
+	implementation 'com.mysql:mysql-connector-j:8.0.32'
+}
+
+bootRun {
+	mainClass = 'com.accountprovider.Application'
+}
