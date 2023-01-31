@@ -1,3 +1,5 @@
+version: "3.0"
+
 services:
   account-provider:
     build:
@@ -7,4 +9,9 @@ services:
     volumes:
       - ./build/libs/account-provider.jar:/app/account-provider.jar
     ports:
-      - 9085:8081
+      - "9085:8081"
+    networks:
+      - provider
+
+networks:
+  provider:

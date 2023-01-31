@@ -31,8 +31,8 @@ public class HelloController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/hello")
-    public ResponseEntity<String> plm() {
-        return ResponseEntity.ok("Fututi mortim ati gascanule");
+    public ResponseEntity<String> hello() {
+        return ResponseEntity.ok("HELOOOOOO");
     }
 
 }
