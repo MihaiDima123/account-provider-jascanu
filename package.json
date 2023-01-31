@@ -1,7 +1,7 @@
 {
     "scripts": {
         "tomcat": "docker compose -f docker-compose-local.yaml up",
-        "start": "gradlew clean bootJar && cd localdb && docker compose up -d && npm run tomcat",
+        "start": "npm run clean && gradlew bootJar && cd localdb && docker compose up -d && npm run tomcat",
         "clean": "gradlew clean && docker compose -f docker-compose-local.yaml down && cd localdb && docker compose down"
     }
 }
